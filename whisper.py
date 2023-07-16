@@ -1,8 +1,10 @@
 import os
 import openai
 
-openai.api_key = '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'
+api_key = os.environ.get('OPENAI_API_KEY')
 
+# 設定 OpenAI API 密鑰
+openai.api_key = api_key
 audio_file= open("Porsche (with Doug DeMuro).mp3", "rb")
 transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
