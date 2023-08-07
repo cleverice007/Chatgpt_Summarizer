@@ -1,10 +1,17 @@
 import os
 import openai
+from dotenv import load_dotenv
 
-api_key = os.environ.get('OPENAI_API_KEY')
+# 讀取 .env 檔案
+load_dotenv()
+
+# 取得 API 密鑰
+api_key = os.getenv('OPENAI_API_KEY')
 
 # 設定 OpenAI API 密鑰
 openai.api_key = api_key
+
+
 audio_file= open("Porsche (with Doug DeMuro).mp3", "rb")
 transcript = openai.Audio.transcribe("whisper-1", audio_file)
 
