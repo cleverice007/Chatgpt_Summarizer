@@ -73,7 +73,7 @@ with open('stage_1_titles.txt', 'w') as f:
   for item in stage_1_titles:
     f.write("%s\n" % item)
 
-with open('stage1_outputs.txt', 'w') as f:
+with open('stage_1_outputs.txt', 'w') as f:
   for item in stage_1_outputs:
     f.write("%s\n" % item)  
 
