@@ -1,4 +1,4 @@
- Porsche: A German Accent and the Story Behind the Brand 
+ Porsche: A German Automotive Company 
  Porsche: Striking a Balance Between Luxury and Daily Driver 
  The History of Porsche - From Nazis to Luxury Brand 
  Doug's Porsche Carrera GT: An Interview with Doug 
@@ -14,11 +14,11 @@
 Rivalry between Mercedes-Benz and Porsche 
  Ferdinand Porsche's Career and Consulting Firm 
  The Founding of Porsche 
- Anton Piech and Adolf Rosenberger: The Forgotten Porsche History 
+ Anton Piech and Adolf Rosenberger: The Founding of Porsche and the Nazis' Role 
  Adolf Hitler's Role in the Creation of the Volkswagen Beetle 
 Mark Zuckerberg and Facebook: Nazi Connections and Refounding 
  The Incredible Refounding of Volkswagen 
- The Original Beetle: A Long-Produced Car Model 
+ The Original Volkswagen Beetle: A Long-Produced and Widely-Used Car Model 
 The Volkswagen Beetle: A Nazi Creation 
  The Creation of Wolfsburg and Volkswagen 
  Volkswagen and Porsche Operations After WWII 
@@ -27,7 +27,7 @@ The Volkswagen Beetle: A Nazi Creation
  Major Ivan Hirst and the Missed Opportunities of the British Car Industry 
 The Birth of Volkswagen 
  The Rise of the Volkswagen Beetle 
- Post-War Mobility: The Beetle and Its European Counterparts 
+ Post-War Mobility: The Beetle and Other Small Cars 
 The Volkswagen Beetle: A 50 Year Legacy 
  Ferdinand Porsche's Post-War Design Talent 
  Ferdinand Porsche and His Descendants 
@@ -38,7 +38,7 @@ The Volkswagen Beetle: A 50 Year Legacy
  Ferry Porsche's Vision for a Volkswagen 
 Ferdinand Porsche's Vision for the Sports Car 
  The Birth of Affordable Sports Cars 
-Sports Cars of the Pre-Porsche Era 
+The Unwieldy Nature of Early Sports Cars 
  Supercharging a Car Engine 
  How a Combustion Engine Works 
  Ferry Porsche's Idea of a Turbocharged Beetle 
@@ -56,10 +56,10 @@ The Market for Luxury Sports Cars in War-Torn Europe
  The Evolution of Car Selling Value Chains 
  Volkswagen's Manufacturing and IPO 
 Tiny: The Berkshire Hathaway of the Internet 
- Tiny: The Poster Child for Durability and Long-Term Thinking 
+ Tiny's Durability and Long-Term Thinking 
  Reinvesting Positive Cash Flows for Growth 
   West German Post-Nazi Government's Deal with Former Nazis 
- The Marshall Plan and the Cold War 
+Rebuilding West Germany After WWII 
  West Germany's Tax Incentive System for Industrialists 
 High Marginal Tax Rates in Germany 
 Incentivizing Capital Reinvestment 
@@ -77,7 +77,7 @@ The Racing Legacy of Porsche and Hollywood Stars
  The Endurance of Porsche at Le Mans 
  Porsche's Popularity in America 
  Porsche's American Market Share 
- Porsche's Unprecedented Success in Europe's Sports Car Startups 
+ Porsche's Unprecedented Success 
  Porsche's Success
  The Rise of Sports Cars in the 1960s 
  The Rise of Automotive Iconic Models 
@@ -85,19 +85,19 @@ The Racing Legacy of Porsche and Hollywood Stars
  Porsche's Decision to Focus on Sports Cars 
  The Birth of the Porsche 901 
  The 911 Naming Story 
- The Origin of the 911 
- Porsche Engineering Projects
+  The Origin of the 911 Model 
+ Porsche Engineering Projects 
  Porsche Car Designs and Model Numbers 
  Porsche 911 Models
  Porsche's Iconic Design
   Porsche 911's Success Story 
   The Porsche 911: A Symbol of Sports Cars 
- The Porsche 911 and its Unique Flat-Six Boxer Engine 
+ The Porsche 911: A Combination of Reliability, Comfort, and Practicality 
  The Benefits of the Boxer Engine 
  The Power of Six Cylinders 
  Porsche's Introduction of the 912 to Fill the Price Gap 
- Porsche's 912 Model: A Stopgap Solution 
- Porsche and Volkswagen's Joint Project: The 914 
+ Porsche 912: A Stopgap Model to Create an Entry-Level Porsche 
+ Porsche and Volkswagen's Joint Project to Create the 914 
  The 914 Project: A Joint Venture between Volkswagen and Porsche 
  Volkswagen and Porsche's Joint Development of the 914 Sports Car 
 VW and Porsche Enter Wide-Ranging Partnership 
@@ -131,21 +131,21 @@ The Porsche 924: A Decent Car Despite Stigma
 The Evolution of Automobiles 
  Porsche's History of Model Changes 
  Porsche's 911 and 928 Models: A Look at the History of Sports Cars 
- The Oil Crisis and Emissions Laws: Challenges for Automotive Power 
+ The Oil Crisis and Emissions Laws 
  Porsche's Move from the 911 to the 928 in the 1980s 
  Porsche's Rise in the 1980s 
  Porsche's 911 Production Line: The Story of the 928's Impact on Morale 
  Porsche's 911: The Impending Cancellation 
  Schutz's Edict to Replace the 911 
  Peter Schutz Saves the 911 
- Peter Schutz's Line Drawing: The True Story of a Porsche CEO's Reputation Boost 
+ Peter Schutz's Line Drawing at Porsche 
 Validation of a Famous Story 
  Porsche's Production Line Extension 
 The Go-Go Years of the 80s and the Tech of 2021 
  European Luxury Brands' IPO Strategy 
  Porsche's Struggles in the 1980s 
  Schutz's Investment in Aged Products Despite Recession 
- Japanese Economic Boom Leads to Cheaper Sports Cars 
+Japanese Economic Boom Led to Cheaper Sports Cars 
 The Tuning of Japanese Cars in the 90s 
  Porsche's Naming System: A Complete Disaster 
   Porsche's History of Carrera Models 
@@ -161,13 +161,13 @@ The Tuning of Japanese Cars in the 90s
 Contract Manufacturing: A Necessary Step for Businesses in a Tough Era 
  Porsche's Struggle to Survive 
  Vanta's Growth and Expansion 
- Vanta's Vendor Risk Management: Streamlining Compliance and Security Posture 
+Vanta: Streamlining Compliance and Vendor Risk Management 
  Vanta: A Comprehensive Solution for Security and Compliance 
  Porsche Paint Library Wine 
  Porsche's Unbelievable Heritage 
  Porsche's Long
  Porsche's Branding Strategy: Hooking People Young to Cultivate Passion 
- Porsche's Transformation
+ Porsche's Turbulent History 
  Wendelin Wiedeking's Impact on Porsche 
  Porsche's Return Moment: Cutting Product Lines to the 911 
  Porsche's Strategy for an Entry Level Model 
@@ -179,7 +179,7 @@ The Boxster: Reviving the 914 Concept
  Porsche's Mid
 Wiedeking's Strategy for Porsche 
  Porsche SUVs: A Controversial Design Choice 
- Porsche's SUV Heritage 
+ Porsche's SUV Design Evolution 
  Revolution of Luxury SUVs 
  Porsche's Early Entry into the SUV Market 
  Porsche's Cayenne SUV: A Cultural German Phenomenon 
@@ -192,7 +192,7 @@ The Carrera GT: A Legendary Driving Machine
 Analog Supercar: A Look at the Powertrain 
  Ferdinand Piech's 911 Engine: A Look at the Innovative Design of a Race Car Engine for Road Use 
  The End of an Era 
- The Last of an Era - Audi RS3 
+ The Last of an Era: Audi RS3 
   Porsche's Deadly Reputation 
  Automaker's Unforeseen Issues Result in Low Car Sales 
  Porsche Carrera GTs: A Missed Investment Opportunity 
@@ -201,7 +201,7 @@ Brand Equity and Production Line Legitimization
  Porsche's 100X Market Cap Growth 
  Investing in Porsche in 1993 
  Porsche's Profitability and Expansion 
-  The Panamera: Porsche's Entry into the China Market 
+  Porsche's Panamera: Targeting the China Market 
  Porsche's Expansion into the Luxury Market 
  Porsche's Expansion Strategy 
  Porsche's Expansion Strategy Leads to Acquisition by Volkswagen 
@@ -209,7 +209,7 @@ Brand Equity and Production Line Legitimization
 Wiedeking's Ambition at Porsche 
  Porsche
  Porsche's Acquisition of Volkswagen Group 
- Porsche's Takeover of Volkswagen 
+ Porsche's Takeover of Volkswagen
   Volkswagen Law: Protecting Volkswagen Group from Takeovers 
  Porsche SE Holding
  Porsche SE Holding: Wiedeking Loads Up Holding Company with Cheap Debt to Buy VW Shares 
@@ -229,15 +229,15 @@ Wiedeking's Ambition at Porsche
  Porsche's 918 Spyder
  Porsche's 918 Spyder: A Plug-In Hybrid Supercar 
  Porsche's Transition to Electric Supercars 
- The Electric Supercar Revolution 
+ The Future of Supercars: Electric or Not? 
 Preserving Resale Value: Porsche and Ferrari's Commitment to Supporting Orphaned Cars 
   The History of Ferrari 
  Porsche Joining Volkswagen Group 
  Funding a Company
  VC Funding is Not Necessary for Success 
- The Discipline of Making Money 
+ The Discipline of Business 
 Venture Capital: A Double-Edged Sword 
-Pilot Powers Accounting and Bookkeeping for OpenAI Airtable Scale 
+Porsche's History and Automation 
  Volkswagen's Shared Engines Across Model Lines 
  Porsche's Early Adoption of Electric Vehicles 
  Japan's Late Entry into the Electric Vehicle Market 
@@ -259,42 +259,42 @@ The Intermingling of Companies and Platforms
  Porsche SUVs and Global Sales 
  Tesla's Mass Market Brand 
   Luxury Brand Perception: Louis Vuitton vs. Hermes 
- Porsche's Elevated Status 
+  Porsche's Elevated Status 
  Brand Perception and Scale 
 Comparing Ferrari and Porsche 
  Porsche's Aggregate Market Cap and the Carrera GT 
   Refusing to Drive a Porsche SUV 
   The Pros and Cons of Driving a Porsche 
-  Mazda CX-5 vs. Tesla Model 3: A Low-Key Comparison 
+  Driving Preferences 
  Porsche Macan
 Comparing Automotive Gross Margins 
   Luxury Car Markups and Gross Margins 
   Luxury Goods vs. Luxury Cars 
 The Challenges of Automotive Businesses 
- Power Analysis of Automotive Manufacturing 
+ Analyzing Business Power and Scalability 
  Porsche's Unique Ability to Balance Luxury and Scale 
 Scale Economies and Brand Differentiation in the SUV Business 
  German Engineering Reputation and Reliability 
- Is Reliability Still an Advantage for Porsche? 
+ Porsche's Reliability: Is it Still an Advantage? 
  The Uniqueness of Heritage Brands 
   The Future of Automotive Heritage Brands 
  Brand and Performance as a Commodity 
- Porsche Ads
+ Porsche Ads: Iconic Brand Advertising and Counter Positioning 
  Porsche Advertising: A Look Back 
  Porsche's Dominance in the Car Industry 
  German Engineering and Automotive Technology 
  Porsche's Racing Playbook 
- Investing in Racing and Brand Prestige 
+ Porsche and Nike Invest in Brand Prestige 
 Brand Continuity and Fan Service: Porsche's Strategy for Long-Term Success 
  The Dream of Owning a Porsche 
  Working for Porsche
-  Evaluating Porsche with an Acquired-adjusted Doug Score 
+ Evaluating Porsche with an Acquired-adjusted Doug Score 
  Porsche's Prospects for Revenue Growth 
  Porsche's Resilience in a Downturn 
  Porsche's Resilience in a Recession 
  Porsche's Profitability and Fleecing Customers 
  Porsche's Profitability Compared to Apple and the Automotive Industry 
-The Auto Industry and Profitability 
+The Car Business and Profitability 
 Porsche's Profitability and Defensibility 
  Porsche's Rise in Popularity 
  Porsche's Successful Brand Equity 
@@ -308,7 +308,7 @@ Analog ResortPass
 Comparing Characters on Curb Your Enthusiasm 
  WhistlinDiesel - A Car YouTuber 
 David: The Mr. Beast of Cars 
-   Doug's Guilty Pleasure: YouTube Channel of Destruction 
+   Doug's Guilty Pleasure: YouTube Channel 
  The Dangers of YouTube 
  Doug DeMuro's YouTube Empire 
  Doug DeMuro: YouTube Star and Entrepreneur 

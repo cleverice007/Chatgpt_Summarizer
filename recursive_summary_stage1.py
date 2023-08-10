@@ -4,10 +4,6 @@ from create_chunks import parse_title_summary_results
 from create_chunks import segments
 from datetime import datetime
 import matplotlib.pyplot as plt
-from scipy.spatial.distance import cosine
-import networkx as nx
-from networkx.algorithms import community
-
 from langchain import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains.llm import LLMChain

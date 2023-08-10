@@ -4,8 +4,12 @@ from langchain.chains.llm import LLMChain
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.docstore.document import Document
 from langchain.chains.summarize import load_summarize_chain
+from datetime import datetime
 import numpy as np
-
+from scipy.spatial.distance import cosine
+import networkx as nx
+from networkx.algorithms import community
+from recursive_summary_stage1 import stage_1_summaries, stage_1_titles, num_1_chunks
 
 from dotenv import load_dotenv
 
@@ -110,91 +114,97 @@ def get_topics(title_similarity, num_topics = 8, bonus_constant = 0.25, min_size
     'topics': topics_title
     }
 
-def summarize_stage_2(stage_1_outputs, topics, summary_num_words = 250):
-  print(f'Stage 2 start time {datetime.now()}')
-  
-  # Prompt that passes in all the titles of a topic, and asks for an overall title of the topic
-  title_prompt_template = """Write an informative title that summarizes each of the following groups of titles. Make sure that the titles capture as much information as possible, 
-  and are different from each other:
-  {text}
-  
-  Return your answer in a numbered list, with new line separating each title: 
-  1. Title 1
-  2. Title 2
-  3. Title 3
+  # Set num_topics to be 1/4 of the number of chunks, or 8, which ever is smaller
+num_topics = min(int(num_1_chunks / 4), 8)
+topics_out = get_topics(summary_similarity_matrix, num_topics = num_topics, bonus_constant = 0.2)
+chunk_topics = topics_out['chunk_topics']
+topics = topics_out['topics']
 
-  TITLES:
-  """
 
-  map_prompt_template = """Wite a 75-100 word summary of the following text:
+def summarize_stage_2(stage_1_outputs, topics, summary_num_words=250):
+    print(f'Stage 2 start time {datetime.now()}')
+
+    # Prompt that passes in all the titles of a topic, and asks for an overall title of the topic
+    title_prompt_template = """Write an informative title that summarizes each of the following groups of titles. Make sure that the titles capture as much information as possible, 
+    and are different from each other:
+    {text}
+
+    Return your answer in a numbered list, with new line separating each title: 
+    1. Title 1
+    2. Title 2
+    3. Title 3
+
+    TITLES:
+    """
+
+    map_prompt_template = """Write a 75-100 word summary of the following text:
     {text}
 
     CONCISE SUMMARY:"""
 
-  combine_prompt_template = 'Write a ' + str(summary_num_words) + """-word summary of the following, removing irrelevant information. Finish your answer:
-  {text}
-  """ + str(summary_num_words) + """-WORD SUMMARY:"""
+    combine_prompt_template = 'Write a ' + str(summary_num_words) + """-word summary of the following, removing irrelevant information. Finish your answer:
+    {text}
+    """ + str(summary_num_words) + """-WORD SUMMARY:"""
 
-  title_prompt = PromptTemplate(template=title_prompt_template, input_variables=["text"])
-  map_prompt = PromptTemplate(template=map_prompt_template, input_variables=["text"])
-  combine_prompt = PromptTemplate(template=combine_prompt_template, input_variables=["text"])
+    title_prompt = PromptTemplate(template=title_prompt_template, input_variables=["text"])
+    map_prompt = PromptTemplate(template=map_prompt_template, input_variables=["text"])
+    combine_prompt = PromptTemplate(template=combine_prompt_template, input_variables=["text"])
+    topics_data = []
+    for c in topics:
+        topic_data = {
+            'summaries': [stage_1_outputs[int(chunk_id)]['summary'] for chunk_id in c],
+            'titles': [stage_1_outputs[int(chunk_id)]['title'] for chunk_id in c]
+        }
+        topic_data['summaries_concat'] = ' '.join(topic_data['summaries'])
+        topic_data['titles_concat'] = ', '.join(topic_data['titles'])
+        topics_data.append(topic_data)
 
-  topics_data = []
-  for c in topics:
-    topic_data = {
-      'summaries': [stage_1_outputs[chunk_id]['summary'] for chunk_id in c],
-      'titles': [stage_1_outputs[chunk_id]['title'] for chunk_id in c]
-    }
-    topic_data['summaries_concat'] = ' '.join(topic_data['summaries'])
-    topic_data['titles_concat'] = ', '.join(topic_data['titles'])
-    topics_data.append(topic_data)
-    
-  # Get a list of each community's summaries (concatenated)
-  topics_summary_concat = [c['summaries_concat'] for c in topics_data]
-  topics_titles_concat = [c['titles_concat'] for c in topics_data]
+    # Get a list of each community's summaries (concatenated)
+    topics_summary_concat = [c['summaries_concat'] for c in topics_data]
+    topics_titles_concat = [c['titles_concat'] for c in topics_data]
 
-  # Concat into one long string to do the topic title creation
-  topics_titles_concat_all = ''''''
-  for i, c in enumerate(topics_titles_concat):
-    topics_titles_concat_all += f'''{i+1}. {c}
+    # Concat into one long string to do the topic title creation
+    topics_titles_concat_all = ''
+    for i, c in enumerate(topics_titles_concat):
+        topics_titles_concat_all += f'''{i+1}. {c}
     '''
-  
-  # print('topics_titles_concat_all', topics_titles_concat_all)
 
-  title_llm = OpenAI(temperature=0, model_name = 'text-davinci-003')
-  title_llm_chain = LLMChain(llm = title_llm, prompt = title_prompt)
-  title_llm_chain_input = [{'text': topics_titles_concat_all}]
-  title_llm_chain_results = title_llm_chain.apply(title_llm_chain_input)
-  
-  
-  # Split by new line
-  titles = title_llm_chain_results[0]['text'].split('\n')
-  # Remove any empty titles
-  titles = [t for t in titles if t != '']
-  # Remove spaces at start or end of each title
-  titles = [t.strip() for t in titles]
+    # print('topics_titles_concat_all', topics_titles_concat_all)
 
-  map_llm = OpenAI(temperature=0, model_name = 'text-davinci-003')
-  reduce_llm = OpenAI(temperature=0, model_name = 'text-davinci-003', max_tokens = -1)
+    title_llm = OpenAI(temperature=0, model_name='text-davinci-003')
+    title_llm_chain = LLMChain(llm=title_llm, prompt=title_prompt)
+    title_llm_chain_input = [{'text': topics_titles_concat_all}]
+    title_llm_chain_results = title_llm_chain.apply(title_llm_chain_input)
 
-  # Run the map-reduce chain
-  docs = [Document(page_content=t) for t in topics_summary_concat]
-  chain = load_summarize_chain(chain_type="map_reduce", map_prompt = map_prompt, combine_prompt = combine_prompt, return_intermediate_steps = True,
-                              llm = map_llm, reduce_llm = reduce_llm)
+    # Split by new line
+    titles = title_llm_chain_results[0]['text'].split('\n')
+    # Remove any empty titles
+    titles = [t for t in titles if t != '']
+    # Remove spaces at start or end of each title
+    titles = [t.strip() for t in titles]
 
-  output = chain({"input_documents": docs}, return_only_outputs = True)
-  summaries = output['intermediate_steps']
-  stage_2_outputs = [{'title': t, 'summary': s} for t, s in zip(titles, summaries)]
-  final_summary = output['output_text']
+    map_llm = OpenAI(temperature=0, model_name='text-davinci-003')
+    reduce_llm = OpenAI(temperature=0, model_name='text-davinci-003', max_tokens=-1)
 
-  # Return: stage_1_outputs (title and summary), stage_2_outputs (title and summary), final_summary, chunk_allocations
-  out = {
-    'stage_2_outputs': stage_2_outputs,
-    'final_summary': final_summary
-  }
-  print(f'Stage 2 done time {datetime.now()}')
-  
-  return out
+    # Run the map-reduce chain
+    docs = [Document(page_content=t) for t in topics_summary_concat]
+    chain = load_summarize_chain(chain_type="map_reduce", map_prompt=map_prompt, combine_prompt=combine_prompt,
+                                 return_intermediate_steps=True, llm=map_llm, reduce_llm=reduce_llm)
+
+    output = chain({"input_documents": docs}, return_only_outputs=True)
+    summaries = output['intermediate_steps']
+    stage_2_outputs = [{'title': t, 'summary': s} for t, s in zip(titles, summaries)]
+    final_summary = output['output_text']
+
+    # Return: stage_1_outputs (title and summary), stage_2_outputs (title and summary), final_summary, chunk_allocations
+    out = {
+        'stage_2_outputs': stage_2_outputs,
+        'final_summary': final_summary
+    }
+    print(f'Stage 2 done time {datetime.now()}')
+
+    return out
+
 
   # Query GPT-3 to get a summarized title for each topic_data
 out = summarize_stage_2(stage_1_outputs, topics, summary_num_words = 250)
